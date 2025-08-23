@@ -16,7 +16,7 @@
             <p style="margin: 5px 0;">{{ $data['message'] }}</p>
         </div>
 
-        <p style="font-size: 16px;">Thanks,<br><strong>{{ config('app.name') }}</strong></p>
+        <p style="font-size: 16px;">Thanks,<br><strong>Mishor</strong></p>
     </div>
 </body>
 </html>

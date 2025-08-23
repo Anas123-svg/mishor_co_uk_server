@@ -36,7 +36,7 @@
             </tr>
         </table>
 
-        <p style="margin-top: 25px; font-size: 16px;">Thanks,<br><strong>{{ config('app.name') }}</strong></p>
+        <p style="margin-top: 25px; font-size: 16px;">Thanks,<br><strong>Mishor</strong></p>
     </div>
 </body>
 </html>
