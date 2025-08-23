@@ -23,7 +23,7 @@ class ContactController extends Controller
         Mail::to($validated['email'])->send(new ContactConfirmationMail($validated));
 
         // Send original message to admins
-        Mail::to(['admin1@mishor.com', 'admin2@mishor.com'])->send(new ContactMail($validated));
+        Mail::to(['m.anastebrw2@gmail.com'])->send(new ContactMail($validated));
 
         return response()->json([
             'success' => true,
