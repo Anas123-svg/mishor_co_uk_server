@@ -1,34 +1,42 @@
-@component('mail::message')
-<div style="font-family: 'Arial', sans-serif; color: #333; line-height: 1.6; padding: 10px;">
-    <h2 style="color: #E94E77;">New Contact Message</h2>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>New Contact Message</title>
+</head>
+<body style="font-family: Arial, sans-serif; background-color: #fff5f5; margin: 0; padding: 20px; color: #333;">
+    <div style="max-width: 600px; margin: auto; background: #ffffff; border-radius: 10px; padding: 25px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); border-top: 5px solid #E94E4E;">
+        
+        <h2 style="color: #E94E4E; margin-bottom: 20px;">New Contact Message</h2>
 
-    <table style="width: 100%; border-collapse: collapse; margin: 10px 0;">
-        <tr>
-            <td style="font-weight: bold; padding: 5px; width: 120px;">Name:</td>
-            <td style="padding: 5px;">{{ $data['name'] }}</td>
-        </tr>
-        <tr>
-            <td style="font-weight: bold; padding: 5px;">Email:</td>
-            <td style="padding: 5px;">{{ $data['email'] }}</td>
-        </tr>
-        @if(!empty($data['whatsapp']))
-        <tr>
-            <td style="font-weight: bold; padding: 5px;">WhatsApp:</td>
-            <td style="padding: 5px;">{{ $data['whatsapp'] }}</td>
-        </tr>
-        @endif
-        @if(!empty($data['phone']))
-        <tr>
-            <td style="font-weight: bold; padding: 5px;">Phone:</td>
-            <td style="padding: 5px;">{{ $data['phone'] }}</td>
-        </tr>
-        @endif
-        <tr>
-            <td style="font-weight: bold; padding: 5px; vertical-align: top;">Message:</td>
-            <td style="padding: 5px;">{{ $data['message'] }}</td>
-        </tr>
-    </table>
+        <table style="width: 100%; border-collapse: collapse; font-size: 16px;">
+            <tr>
+                <td style="font-weight: bold; padding: 8px; width: 120px;">Name:</td>
+                <td style="padding: 8px;">{{ $data['name'] }}</td>
+            </tr>
+            <tr>
+                <td style="font-weight: bold; padding: 8px;">Email:</td>
+                <td style="padding: 8px;">{{ $data['email'] }}</td>
+            </tr>
+            @if(!empty($data['whatsapp']))
+            <tr>
+                <td style="font-weight: bold; padding: 8px;">WhatsApp:</td>
+                <td style="padding: 8px;">{{ $data['whatsapp'] }}</td>
+            </tr>
+            @endif
+            @if(!empty($data['phone']))
+            <tr>
+                <td style="font-weight: bold; padding: 8px;">Phone:</td>
+                <td style="padding: 8px;">{{ $data['phone'] }}</td>
+            </tr>
+            @endif
+            <tr>
+                <td style="font-weight: bold; padding: 8px; vertical-align: top;">Message:</td>
+                <td style="padding: 8px;">{{ $data['message'] }}</td>
+            </tr>
+        </table>
 
-    <p style="font-size: 16px;">Thanks,<br><strong>{{ config('app.name') }}</strong></p>
-</div>
-@endcomponent
+        <p style="margin-top: 25px; font-size: 16px;">Thanks,<br><strong>{{ config('app.name') }}</strong></p>
+    </div>
+</body>
+</html>

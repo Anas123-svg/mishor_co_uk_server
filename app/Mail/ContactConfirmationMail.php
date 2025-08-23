@@ -30,7 +30,7 @@ class ContactConfirmationMail extends Mailable
     public function build()
     {
         return $this->subject('We Received Your Message')
-                    ->markdown('emails.contact_confirmation')
+                    ->view('emails.contact_confirmation')
                     ->with('data', $this->data);
     }
 }
