@@ -13,20 +13,24 @@
 
         <div style="background-color: #ffe5e5; padding: 15px; border-left: 4px solid #E94E4E; margin: 20px 0; border-radius: 5px;">
             <strong>Your Message:</strong><br>
+
             @if(!empty($data['location']))
                 <p><strong>Location:</strong> {{ $data['location'] }}</p>
             @endif
+
             @if(!empty($data['project_details']))
                 <p><strong>Project Details:</strong> {{ $data['project_details'] }}</p>
             @endif
-            <p>{{ $data['message'] }}</p>
+
+            @if(!empty($data['message']))
+                <p>{{ $data['message'] }}</p>
+            @endif
+
             @if(!empty($data['images']))
                 <p><strong>Images:</strong></p>
-                <ul>
-                    @foreach($data['images'] as $img)
-                        <li><a href="{{ $img }}">{{ $img }}</a></li>
-                    @endforeach
-                </ul>
+                @foreach($data['images'] as $img)
+                    <p><img src="{{ $img }}" alt="Image" style="max-width: 100%; height: auto; margin-bottom: 10px; border-radius: 5px;"></p>
+                @endforeach
             @endif
         </div>
 

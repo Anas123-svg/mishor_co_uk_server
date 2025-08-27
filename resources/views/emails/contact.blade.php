@@ -46,18 +46,18 @@
             <tr>
                 <td style="font-weight: bold; padding: 8px; vertical-align: top;">Images:</td>
                 <td style="padding: 8px;">
-                    <ul>
-                        @foreach($data['images'] as $img)
-                            <li><a href="{{ $img }}">{{ $img }}</a></li>
-                        @endforeach
-                    </ul>
+                    @foreach($data['images'] as $img)
+                        <p><img src="{{ $img }}" alt="Image" style="max-width: 100%; height: auto; margin-bottom: 10px; border-radius: 5px;"></p>
+                    @endforeach
                 </td>
             </tr>
             @endif
+            @if(!empty($data['message']))
             <tr>
                 <td style="font-weight: bold; padding: 8px; vertical-align: top;">Message:</td>
                 <td style="padding: 8px;">{{ $data['message'] }}</td>
             </tr>
+            @endif
         </table>
 
         <p style="margin-top: 25px; font-size: 16px;">Thanks,<br><strong>Mishor</strong></p>
