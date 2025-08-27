@@ -29,7 +29,7 @@ public function store(Request $request)
         Mail::to($validated['email'])->send(new ContactConfirmationMail($validated));
 
         // Send original message to admins
-        Mail::to(['m.anastebrw2@gmail.com'])->send(new ContactMail($validated));
+        Mail::to(['m.anastebrw2@gmail.com','office@mishor.co.uk', 'robert@mishor.co.uk'])->send(new ContactMail($validated));
 
         return response()->json([
             'success' => true,
