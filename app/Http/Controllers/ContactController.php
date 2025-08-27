@@ -18,7 +18,7 @@ public function store(Request $request)
             'email'           => 'required|email',
             'whatsapp'        => 'nullable|string|max:20',
             'phone'           => 'nullable|string|max:20',
-            'message'         => 'required|string',
+            'message'         => 'nullable|string',
             'location'        => 'nullable|string|max:255',
             'project_details' => 'nullable|string',
             'images'          => 'nullable|array',
