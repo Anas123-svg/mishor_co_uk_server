@@ -13,7 +13,21 @@
 
         <div style="background-color: #ffe5e5; padding: 15px; border-left: 4px solid #E94E4E; margin: 20px 0; border-radius: 5px;">
             <strong>Your Message:</strong><br>
-            <p style="margin: 5px 0;">{{ $data['message'] }}</p>
+            @if(!empty($data['location']))
+                <p><strong>Location:</strong> {{ $data['location'] }}</p>
+            @endif
+            @if(!empty($data['project_details']))
+                <p><strong>Project Details:</strong> {{ $data['project_details'] }}</p>
+            @endif
+            <p>{{ $data['message'] }}</p>
+            @if(!empty($data['images']))
+                <p><strong>Images:</strong></p>
+                <ul>
+                    @foreach($data['images'] as $img)
+                        <li><a href="{{ $img }}">{{ $img }}</a></li>
+                    @endforeach
+                </ul>
+            @endif
         </div>
 
         <p style="font-size: 16px;">Thanks,<br><strong>Mishor</strong></p>

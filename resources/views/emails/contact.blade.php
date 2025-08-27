@@ -30,6 +30,30 @@
                 <td style="padding: 8px;">{{ $data['phone'] }}</td>
             </tr>
             @endif
+            @if(!empty($data['location']))
+            <tr>
+                <td style="font-weight: bold; padding: 8px;">Location:</td>
+                <td style="padding: 8px;">{{ $data['location'] }}</td>
+            </tr>
+            @endif
+            @if(!empty($data['project_details']))
+            <tr>
+                <td style="font-weight: bold; padding: 8px; vertical-align: top;">Project Details:</td>
+                <td style="padding: 8px;">{{ $data['project_details'] }}</td>
+            </tr>
+            @endif
+            @if(!empty($data['images']))
+            <tr>
+                <td style="font-weight: bold; padding: 8px; vertical-align: top;">Images:</td>
+                <td style="padding: 8px;">
+                    <ul>
+                        @foreach($data['images'] as $img)
+                            <li><a href="{{ $img }}">{{ $img }}</a></li>
+                        @endforeach
+                    </ul>
+                </td>
+            </tr>
+            @endif
             <tr>
                 <td style="font-weight: bold; padding: 8px; vertical-align: top;">Message:</td>
                 <td style="padding: 8px;">{{ $data['message'] }}</td>
